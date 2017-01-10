@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Election 2017</title>
+    <link rel="stylesheet" href="css/election.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Election 2017</h1>
+
+
+    <button id="candidat" class="button pos">Candidat</button>
+    <ul id="candidatlist"></ul>
+
+    <button id="votant" class="button pos1">Inscrivez-vous</button>
+
+    <form id="votantcreate" class="dis">
+        <input type="text" id="firstname" name="firstame" placeholder="Enter your firstname" />
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" />
+        <input type="text" id="age" name="age" placeholder="Enter your age" />
+        <input id="pass" type="submit" value="subscribe" />
+    </form>
+
+    <button id="vot" class="button pos2">Voter</button>
+
+    <form id="vote1" class="pos3">
+        <input type="text" id="lastname1" name="lastname1" placeholder="Enter your lastname" />
+        <input type="text" id="vote" name="vote" placeholder="Enter your vote" />
+        <input id="vv" class="size" type="submit" value="subscribe" />
+    </form>
+
+
+    <button id="resultat" class="button pos4">Resultat</button>
+    <ul id="result"></ul>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
