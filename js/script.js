@@ -27,11 +27,13 @@
                  } else {
                      o[candidat] = 1;
                  }
-
-                 var _li = '<li>' + o + '</li>';
-                 $('#result').append(_li);
              }
              console.log(o);
+
+             for (candidat in o) {
+                 var _li = '<li>' + candidat + ' -> ' + o[candidat] + '</li>';
+                 $('#result').append(_li);
+             }
          })
      });
 
