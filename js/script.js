@@ -12,10 +12,26 @@
      $('#resultat').click(function () {
          $.get('/api/vote', function (data) {
 
+             //  for (var i = 0; i < data.length; i++) {
+             //     var _li = '<li>' + data[i].vote + '</li>';
+             //   $('#result').append(_li);
+             //}
+
+             var o = {};
+
              for (var i = 0; i < data.length; i++) {
-                 var _li = '<li>' + data[i].vote + '</li>';
+                 var candidat = data[i].vote;
+
+                 if (o[candidat]) {
+                     o[candidat]++;
+                 } else {
+                     o[candidat] = 1;
+                 }
+
+                 var _li = '<li>' + o + '</li>';
                  $('#result').append(_li);
              }
+             console.log(o);
          })
      });
 
@@ -59,6 +75,10 @@
 
      $("#pass").click(function () {
          $("#votantcreate").fadeOut("fast");
+     });
+
+     $("#pass").click(function () {
+         $("#votant").fadeOut("fast");
      });
 
      $("#pass").click(function () {
